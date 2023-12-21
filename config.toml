@@ -1,0 +1,2 @@
+
+database_url= "postgres://rust-sql-test@localhost/rust-sql-test?sslmode=disable"
