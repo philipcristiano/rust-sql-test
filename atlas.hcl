@@ -3,12 +3,17 @@ variable "destructive" {
   default = false
 }
 
+variable "database_url" {
+  type    = string
+  default = getenv("DATABASE_URL")
+}
+
 env "local" {
   src = [
     "file://schema/users.hcl"
   ]
 
-  url = "postgres://rust-sql-test@localhost/rust-sql-test?sslmode=disable"
+  url = var.database_url
 
   diff {
     skip {

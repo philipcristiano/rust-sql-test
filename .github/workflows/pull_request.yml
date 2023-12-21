@@ -54,8 +54,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3.0.1
-      - name: Install Atlas
-        run: |
-          curl -sSf https://atlasgo.sh | sh
-      - run: |
-          atlas schema apply --env local -u 'postgres://postgres:postgres@localhost:5432/rust-sql-test?sslmode=disable' --auto-approve
+
+      - name: Apply Schema
+        uses: docker://arigaio/atlas:0.15.0-community
+        env:
+          DATABASE_URL: "postgres://postgres:postgres@postgres/rust-sql-test?sslmode=disable"
+        with:
+          args: schema apply --env local --auto-approve
