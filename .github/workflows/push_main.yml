@@ -42,7 +42,7 @@ jobs:
       - uses: actions/checkout@v4.1.1
 
       - name: Apply Schema
-        uses: docker://arigaio/atlas:0.15.0-community
+        uses: docker://arigaio/atlas:0.16.0-community
         env:
           DATABASE_URL: "postgres://postgres:postgres@postgres/rust-sql-test?sslmode=disable"
         with:
