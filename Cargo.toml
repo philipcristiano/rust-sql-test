@@ -10,7 +10,7 @@ publish = false
 
 [dependencies]
 anyhow = "1.0.80"
-clap = { version = "4.5.1", features = ["derive", "env"]}
+clap = { version = "4.5.2", features = ["derive", "env"]}
 docker-api = "0.14.0"
 futures = "0.3.30"
 maud = { version = "0.26.0", features = ["axum"] }
@@ -24,5 +24,5 @@ tracing = "0.1.40"
 
 url = "2.5.0"
 signal-hook = "0.3.17"
-service_conventions = "0.0.1"
+service_conventions = "0.0.4"
 sqlx = { version = "0.7.3", features = ["runtime-tokio", "tls-rustls", "postgres", "macros"] }
