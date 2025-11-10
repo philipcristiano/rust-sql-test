@@ -2485,7 +2485,7 @@ dependencies = [
 
 [[package]]
 name = "rust-sql-test"
-version = "0.0.1"
+version = "0.1.0"
 dependencies = [
  "anyhow",
  "clap",
