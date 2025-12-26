@@ -23,6 +23,6 @@ tracing = "0.1.40"
 
 
 url = "2.5.0"
-signal-hook = "0.3.17"
+signal-hook = "0.4.0"
 service_conventions = "0.0.32"
 sqlx = { version = "0.8.0", features = ["runtime-tokio", "tls-rustls", "postgres", "macros"] }
